@@ -1,0 +1,1238 @@
+{{#if this.isCustomHomepage}}
+<section class="course-overview2">
+  <style>
+    /* General Styles */
+    .d-header {
+      background-color: #B3BA9D !important;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+    }
+
+    /* Welcome Section */
+    .welcome-container {
+      background-color: #4E5935;
+      color: #fff;
+      text-align: center;
+      padding: 20px;
+      border-radius: 10px;
+      max-width: 1012px;
+      margin: 20px auto;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .welcome-container h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 2rem;
+      margin: 0;
+    }
+
+    .welcome-container p {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 16px;
+      margin: 10px 0;
+    }
+
+    /* Premium Section */
+    .premium-container {
+    display: flex;
+    justify-content: center;
+    background-color: #ffffff !important;
+    border: 2px solid #c4a769;
+    border-radius: 50px;
+    padding: 4px;
+    max-width: 1017px;
+    margin: 0px auto;
+}
+
+    .premium-text {
+      color: #675f50;
+      text-align: center;
+      margin-bottom: 15px;
+    }
+
+    .premium-text h2 {
+      font-size: 1.5rem;
+      margin: 0 0 10px;
+      color: #8b7642;
+    }
+
+    .premium-text ul {
+      margin: 0;
+      padding: 0;
+      list-style-type: disc;
+      text-align: left;
+    }
+
+    .premium-text ul li {
+      font-size: 0.9rem;
+      line-height: 1.5;
+    }
+
+    .premium-button {
+      background-color: #b4a16f;
+      color: white;
+      padding: 15px 40px;
+      border: none;
+      border-radius: 50px;
+      font-size: 1rem;
+      cursor: pointer;
+      text-align: center;
+      transition: background-color 0.3s;
+    }
+
+    .premium-button:hover {
+      background-color: #a08f5d;
+    }
+/* Container */
+.video-container {
+  padding: 20px;
+  max-width: 800px;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+.onebox.video-onebox, .video-container {
+    background-color: transparent !important;
+}
+
+/* Main Video */
+.main-video iframe {
+  width: 100%;
+  height: 450px; /* Adjust height as necessary */
+  border: 2px solid #ccc;
+  border-radius: 10px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .main-video iframe {
+    height: 300px; /* Reduce height for tablets */
+  }
+}
+
+@media (max-width: 480px) {
+  .main-video iframe {
+    height: 200px; /* Reduce height for mobile */
+  }
+}
+
+/* Video Gallery */
+.video-gallery {
+  display: flex;
+  justify-content: center;
+  gap: 130px;
+  flex-wrap: wrap; /* Ensures the videos wrap on smaller screens */
+  padding: 20px;
+  margin: 0 auto;
+}
+
+/* Individual Video Item */
+.video-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 200px; /* Adjust width as necessary */
+  text-align: center;
+}
+
+.video-item video {
+  width: 130%;
+  border: 2px solid #ccc;
+  border-radius: 10px;
+  transition: border-color 0.3s;
+}
+
+.video-item video:hover {
+  border-color: #b09d5e; /* Hover effect */
+}
+
+.video-title {
+  font-size: 14px;
+  color: #333;
+  margin-top: 8px;
+  text-align: center;
+  line-height: 1.2;
+}
+
+/* test */
+.scrollable-card-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  text-align: center;
+}
+
+.scrollable-card-container h1 {
+  font-size: 22px;
+  color: #3b3b3b;
+  margin-bottom: 20px;
+  font-family: 'Arial', sans-serif;
+  text-align: left;
+}
+
+.scroll-wrapper {
+  display: flex;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.scroll-cards {
+  display: flex;
+  gap: 20px;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  padding: 10px 0;
+}
+
+.scroll-cards::-webkit-scrollbar {
+  display: none;
+}
+
+.card {
+  flex: 0 0 300px; /* Bigger width for each card */
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-decoration: none;
+  color: inherit;
+  text-align: left;
+  transition: transform 0.3s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+}
+
+.card img {
+  width: 100%;
+  height: 200px; /* Increased height for better display */
+  object-fit: cover;
+  border-radius: 10px 10px 0 0;
+}
+
+.card h2 {
+  font-size: 1.2rem;
+  margin: 10px;
+  color: #3b3b3b;
+}
+
+.card p {
+  font-size: 0.95rem;
+  margin: 10px;
+  color: #555;
+}
+
+.card-footer {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  font-size: 0.9rem;
+  color: #999;
+}
+
+.scroll-btn {
+  background-color: #b09d5e;
+  color: white;
+  font-size: 20px;
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+}
+
+.scroll-left {
+  left: 10px;
+}
+
+.scroll-right {
+  right: 10px;
+}
+
+.scroll-btn:hover {
+  background-color: #a08f5d;
+}
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f7f7f7;
+}
+
+.unique-scrollable-container {
+  max-width: 800px;
+  margin: 40px auto;
+  text-align: center;
+}
+
+.unique-scrollable-title {
+  margin-bottom: 20px;
+}
+
+.unique-scrollable-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Show only 3 cards at a time */
+.unique-scroll-cards {
+  display: flex;
+  overflow: hidden;
+  max-width: 660px; /* Adjust to show exactly 3 cards at once */
+  scroll-behavior: smooth;
+}
+
+.unique-card-link {
+  display: inline-block;
+  width: 200px; /* Adjust card width */
+  height: 120px; /* Adjust card height */
+  margin: 0 10px;
+  text-decoration: none;
+  color: #333;
+  flex-shrink: 0;
+}
+
+.unique-video-category {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  border-radius: 5px;
+  font-size: 1rem;
+  font-weight: bold;
+  color: #fff;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  padding-bottom: 10px;
+  text-align: center;
+  background-color: #666; /* fallback if image doesn't load */
+}
+
+/* Scroll buttons */
+.unique-scroll-btn {
+  position: absolute;
+  background: #ccc;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  font-size: 1.2rem;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 2;
+}
+
+.unique-scroll-left {
+  left: -40px; 
+}
+
+.unique-scroll-right {
+  right: -40px;
+}
+
+.unique-scroll-btn:hover {
+  background: #aaa;
+}
+
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background: #fff;
+  color: #333;
+}
+
+.events-section {
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.events-heading {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+
+.events-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 850px; /* Keep this so that not all cards fit at once */
+  margin: 0 auto;
+  
+}
+
+.events-scroll-wrapper {
+  display: flex;
+  gap: 20px;
+  overflow-x: hidden; /* Enables horizontal scroll bar */
+  scroll-behavior: smooth;
+  max-width: 850px; /* Matches container width so scroll is needed */
+  -webkit-overflow-scrolling: touch; /* For smoother scrolling on touch devices */
+}
+
+
+
+/* Each event card */
+.event-card {
+  background: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  width: 220px; /* card width */
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.event-card-top {
+  background: #9da985;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-bottom: 1px solid #ddd;
+}
+
+.speakers {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.speaker {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.speaker-image {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-bottom: 5px;
+}
+
+.speaker-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.speaker-name {
+  font-size: 0.7rem;
+  font-weight: 600;
+  color: #fff;
+  background: #b79846; 
+  padding: 2px 5px;
+  border-radius: 3px;
+  text-transform: uppercase;
+}
+
+.sponsor-logo img {
+  width: 80px;
+}
+
+.event-card-content {
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.event-title {
+  font-size: 0.9rem;
+  font-weight: 600;
+  margin: 0;
+  color: #333;
+}
+
+.event-date {
+  display: flex;
+  flex-direction: column;
+  font-size: 0.8rem;
+  gap: 5px;
+}
+
+.event-month {
+  color: #b32e2e; 
+  font-weight: 700;
+}
+
+.event-time,
+.event-location,
+.event-going {
+  color: #666;
+}
+
+.register-button {
+  background: #b79846;
+  color: #fff;
+  border: none;
+  padding: 8px;
+  font-size: 0.9rem;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: 600;
+  text-align: center;
+}
+
+.register-button:hover {
+  background: #a17d2f;
+}
+
+/* Scroll Buttons */
+.scroll-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: #b79846;
+  color: #fff;
+  border: none;
+  padding: 12px;
+  cursor: pointer;
+  font-size: 1.2rem;
+  border-radius: 50%;
+  z-index: 2;
+}
+
+.scroll-btn:hover {
+  background: #a17d2f;
+}
+
+.scroll-left {
+  left: -40px; 
+}
+
+.scroll-right {
+  right: -40px;
+}
+
+@media (max-width: 768px) {
+  .events-container {
+    max-width: 100%;
+    padding: 0 20px;
+  }
+  
+  .scroll-left,
+  .scroll-right {
+    display: none; /* Hide scroll arrows on mobile if desired */
+  }
+  
+  .events-scroll-wrapper {
+    gap: 10px;
+  }
+}
+
+
+  </style>
+
+  <!-- Welcome Section -->
+  <div class="welcome-container">
+    <h1>Welcome to RISE Impact Investing Community!</h1>
+    <p>We are a network of women who are ready to make an impact through investing.</p>
+    <p>Here, you’ll find a supportive community and the resources you need to align your investments with your values.<br>
+      Whether you’re just starting or looking to expand your impact, we’re here to guide you every step of the way.
+    </p>
+  </div>
+
+  <!-- Premium Section -->
+  <div class="premium-container">
+    <div class="premium-text">
+      <h2>Unlock Premium and Exclusive Benefits</h2>
+      <ul>
+        <li>Exclusive Access to the Impact Investing Masterclass</li>
+        <li>Exclusive and Tailored High-Impact Deals</li>
+        <li>Exclusive Masterclasses, Articles, and News</li>
+        <li>Exclusive Events and In-Person Investors' Dinners and more!</li>
+      </ul>
+    </div>
+    <div>
+      <a href="https://impactinvestingcommunity.com/s" target="_blank">
+        <button class="premium-button">Upgrade to Premium</button>
+      </a>
+    </div>
+  </div>
+
+<div class="video-container">
+  <!-- Main Video -->
+  <div class="main-video">
+    <iframe
+      src=""
+      frameborder="0"
+      allow="autoplay; encrypted-media"
+      allowfullscreen
+      class="responsive-video">
+    </iframe>
+  </div>
+</div>
+
+<div class="video-gallery">
+  <div class="video-item">
+    <iframe
+      src=""
+      frameborder="0"
+      allow="autoplay; encrypted-media"
+      allowfullscreen
+      class="responsive-video">
+    </iframe>
+    <p class="video-title">Planting Seeds Of Change</p>
+  </div>
+  <div class="video-item">
+    <iframe
+      src=""
+      frameborder="0"
+      allow="autoplay; encrypted-media"
+      allowfullscreen
+      class="responsive-video">
+    </iframe>
+    <p class="video-title">A Guide to Impact Investing</p>
+  </div>
+  <div class="video-item">
+    <iframe
+      src=""
+      frameborder="0"
+      allow="autoplay; encrypted-media"
+      allowfullscreen
+      class="responsive-video">
+    </iframe>
+    <p class="video-title">The Future of Impact</p>
+  </div>
+</div>
+<div class="video-gallery">
+  <div class="video-item">
+    <iframe
+      src=""
+      frameborder="0"
+      allow="autoplay; encrypted-media"
+      allowfullscreen
+      class="responsive-video">
+    </iframe>
+    <p class="video-title">Planting Seeds Of Change:Building a sustainable legacy through agriculture</p>
+  </div>
+  <div class="video-item">
+    <iframe
+      src=""
+      frameborder="0"
+      allow="autoplay; encrypted-media"
+      allowfullscreen
+      class="responsive-video">
+    </iframe>
+    <p class="video-title">A guide to Impact Investing: How to make your money really matter</p>
+  </div>
+  <div class="video-item">
+    <iframe
+      src=""
+      frameborder="0"
+      allow="autoplay; encrypted-media"
+      allowfullscreen
+      class="responsive-video">
+    </iframe>
+    <p class="video-title">The future of Impact Investing: Trends to watch</p>
+  </div>
+</div>
+
+<div class="scrollable-card-container">
+  <h1>Discover List of Investment Opportunities</h1>
+  <div class="scroll-wrapper">
+    <button class="scroll-btn scroll-left">&lt;</button>
+    <div class="scroll-cards" id="scroll-cards">
+      <a href="https://impactinvestingcommunity.com/t/energea-renewable-energy/157" class="card">
+        <img src="https://impactinvestingcommunity.com/uploads/default/optimized/1X/11112796108db01e791fb6d17caf83623e99ffa9_2_867x750.jpeg" alt="Energea">
+        <h2>Energea - Renewable Energy</h2>
+        <p>Promoting sustainability and combating climate change</p>
+        <div class="card-footer">
+          <span>👁️ 7</span>
+          <span>💬 0</span>
+        </div>
+      </a>
+      <a href="https://impactinvestingcommunity.com/t/epic-cleantec/140" class="card">
+        <img src="https://impactinvestingcommunity.com/uploads/default/optimized/1X/4220f2dd11b9c0a54a1eca836f9bae00c9962129_2_867x750.jpeg" alt="Epic Cleantec">
+        <h2>Epic Cleantec</h2>
+        <p>Impact Investment: Water Reuse Technology / Onsite Water Reuse</p>
+        <div class="card-footer">
+          <span>👁️ 16</span>
+          <span>💬 0</span>
+        </div>
+      </a>
+      <a href="https://impactinvestingcommunity.com/t/7wireventures-healthcare-vc/168" class="card">
+        <img src="https://impactinvestingcommunity.com/uploads/default/optimized/1X/112ec201589db9fc1e9a723b50de2ac9cd74e937_2_867x750.jpeg" alt="7Wire Ventures">
+        <h2>7Wire Ventures - Healthcare VC</h2>
+        <p>Investing in businesses that make a difference in health and well-being</p>
+        <div class="card-footer">
+          <span>👁️ 5</span>
+          <span>💬 0</span>
+        </div>
+      </a>
+      <a href="https://impactinvestingcommunity.com/t/blocpower-clean-energy/158" class="card">
+        <img src="https://impactinvestingcommunity.com/uploads/default/optimized/1X/7d3201b6da0969907a20eca69f904583ae2bdf80_2_1035x648.jpeg" alt="BlocPower">
+        <h2>BlocPower - Clean Energy</h2>
+        <p>Affordable and clean energy solutions for urban areas</p>
+        <div class="card-footer">
+          <span>$15,000</span>
+          <span>👁️ 10</span>
+          <span>💬 1</span>
+        </div>
+      </a>
+      <a href="https://impactinvestingcommunity.com/t/blocpower-clean-energy/158" class="card">
+        <img src="https://i.ibb.co/gZZLyWN/mischra.png" alt="Mishra Capital">
+        <h2>Mishra Capital</h2>
+        <p>Focused on sustainable investment and growth strategies</p>
+        <div class="card-footer">
+          <span>$50,000</span>
+          <span>👁️ 8</span>
+          <span>💬 2</span>
+        </div>
+      </a>
+      <a href="https://impactinvestingcommunity.com/t/misra-capital-investment/150" class="card">
+        <img src="https://impactinvestingcommunity.com/uploads/default/optimized/1X/0f8fd399fc39f07d2da871fc9224159e02460820_2_867x750.jpeg" alt="ScopeFour Capital">
+        <h2>ScopeFour Capital</h2>
+        <p>Growth and VC funding for high-impact ventures</p>
+        <div class="card-footer">
+          <span>$75,000</span>
+          <span>👁️ 12</span>
+          <span>💬 3</span>
+        </div>
+      </a>
+      <a href="https://impactinvestingcommunity.com/t/sunwealth-big-path-capital/156" class="card">
+        <img src="https://impactinvestingcommunity.com/uploads/default/original/1X/b19c1dbe55508bd90f863f4078dc1200527d81c2.jpeg" alt="Sunwealth">
+        <h2>Sunwealth - Big Path Capital</h2>
+        <p>Investing in clean energy projects</p>
+        <div class="card-footer">
+          <span>$10,000</span>
+          <span>👁️ 13</span>
+          <span>💬 31</span>
+        </div>
+      </a>
+      <a href="https://impactinvestingcommunity.com/t/redwood-materials-recycling/152" class="card">
+        <img src="https://impactinvestingcommunity.com/uploads/default/original/1X/180ea3f944d23d4e11c0a192692f9d17977c734a.jpeg" alt="Redwood Materials">
+        <h2>Redwood Materials - Recycling</h2>
+        <p>Recycling and processing lithium-ion batteries</p>
+        <div class="card-footer">
+          <span>$20,000</span>
+          <span>👁️ 12</span>
+          <span>💬 3</span>
+        </div>
+      </a>
+      <a href="https://impactinvestingcommunity.com/t/tae-technologies-clean-water/151" class="card">
+        <img src="https://impactinvestingcommunity.com/uploads/default/optimized/1X/a07115a6633a0a80c4d208769f472d226b30712b_2_867x750.jpeg" alt="TAE Technologies">
+        <h2>TAE Technologies - Clean Water</h2>
+        <p>Transformational energy source capable of sustaining the planet</p>
+        <div class="card-footer">
+          <span>$25,000</span>
+          <span>👁️ 12</span>
+          <span>💬 3</span>
+        </div>
+      </a>
+      <a href="https://impactinvestingcommunity.com/t/oscilla-power-wave-energy/155" class="card">
+        <img src="https://impactinvestingcommunity.com/uploads/default/optimized/1X/0587f80aa91d9a4d357168e1a4fab5d6b24a2568_2_867x750.jpeg" alt="Oscilla Power">
+        <h2>Oscilla Power - Wave Energy</h2>
+        <p>Advanced ocean wave energy converter</p>
+        <div class="card-footer">
+          <span>$50,000</span>
+          <span>👁️ 12</span>
+          <span>💬 3</span>
+        </div>
+      </a>
+      <a href="https://impactinvestingcommunity.com/t/greenlight-biosciences/170" class="card">
+        <img src="https://impactinvestingcommunity.com/uploads/default/optimized/1X/569ed28483cf09bfca23ce00c635a00deec8f55c_2_867x750.jpeg" alt="Greenlight Biosciences">
+        <h2>Greenlight Biosciences</h2>
+        <p>Innovative solutions for plant health and crop protection</p>
+        <div class="card-footer">
+          <span>$10,000</span>
+          <span>👁️ 12</span>
+          <span>💬 3</span>
+        </div>
+      </a>
+      <a href="https://impactinvestingcommunity.com/t/astia-fund/163" class="card">
+        <img src="https://impactinvestingcommunity.com/uploads/default/optimized/1X/e473cc8f7e25877bb077f40a108199dca30a7942_2_867x750.jpeg" alt="Astia Fund">
+        <h2>Astia Fund</h2>
+        <p>Invests in high-growth companies with women leaders</p>
+        <div class="card-footer">
+          <span>$12,000</span>
+          <span>👁️ 12</span>
+          <span>💬 3</span>
+        </div>
+      </a>
+      <a href="https://impactinvestingcommunity.com/t/ecohyde-startup/139" class="card">
+        <img src="https://impactinvestingcommunity.com/uploads/default/optimized/1X/3d22252ce667cc53381f2da46e494f890dc4330d_2_867x750.jpeg" alt="EcoHyde">
+        <h2>EcoHyde - Startup</h2>
+        <p>Plant-based leather using upcycled fruit and vegetable waste</p>
+        <div class="card-footer">
+          <span>$15,000</span>
+          <span>👁️ 12</span>
+          <span>💬 3</span>
+        </div>
+      </a>
+      <a href="https://impactinvestingcommunity.com/t/solubag/141" class="card">
+        <img src="https://impactinvestingcommunity.com/uploads/default/optimized/1X/07af63628148b7e199d8405e4e1a3abcddf03f91_2_867x750.jpeg" alt="Solubag">
+        <h2>Solubag</h2>
+        <p>Bags that dissolve instantly and are non-toxic</p>
+        <div class="card-footer">
+          <span>$18,000</span>
+          <span>👁️ 15</span>
+          <span>💬 4</span>
+        </div>
+      </a>
+      <a href="https://impactinvestingcommunity.com/t/west-robins-oyster-co/143" class="card">
+        <img src="https://impactinvestingcommunity.com/uploads/default/optimized/1X/d44d3e660b511e69a1b77bd63208cd5d7a5da116_2_867x750.jpeg" alt="West Robins">
+        <h2>West Robins - OYSTER CO</h2>
+        <p>Investing in regenerative farming</p>
+        <div class="card-footer">
+          <span>$8,000</span>
+          <span>👁️ 12</span>
+          <span>💬 3</span>
+        </div>
+      </a>
+      <a href="https://impactinvestingcommunity.com/t/iroquois-valley-organic-farmland/144" class="card">
+        <img src="https://impactinvestingcommunity.com/uploads/default/optimized/1X/3cc332fba56fd97ced80193346adfaa1cc13a613_2_867x750.jpeg" alt="Iroquois Valley">
+        <h2>Iroquois Valley - Organic Farmland</h2>
+        <p>An organic farmland finance company</p>
+        <div class="card-footer">
+          <span>$25,000</span>
+          <span>👁️ 12</span>
+          <span>💬 3</span>
+        </div>
+      </a>
+      <a href="https://impactinvestingcommunity.com/t/mighty-buildings/145" class="card">
+        <img src="https://impactinvestingcommunity.com/uploads/default/optimized/1X/e4cf8ddc1bda7127757229b4ffaa8953680107b8_2_867x750.jpeg" alt="Mighty Buildings">
+        <h2>Mighty Buildings</h2>
+        <p>3D printing for sustainable building</p>
+        <div class="card-footer">
+          <span>$40,000</span>
+          <span>👁️ 12</span>
+          <span>💬 3</span>
+        </div>
+      </a>
+      <a href="https://impactinvestingcommunity.com/t/bowery-vertical-farming/147" class="card">
+        <img src="https://impactinvestingcommunity.com/uploads/default/optimized/1X/28c2658cfec4948ad7b8ddadac615879092067a9_2_867x750.jpeg" alt="Bowery">
+        <h2>Bowery - Vertical Farming</h2>
+        <p>Vertical farming for fresh produce</p>
+        <div class="card-footer">
+          <span>$30,000</span>
+          <span>👁️ 14</span>
+          <span>💬 2</span>
+        </div>
+      </a>
+      <a href="https://impactinvestingcommunity.com/t/carbon-robotics-agtech/148" class="card">
+        <img src="https://impactinvestingcommunity.com/uploads/default/optimized/1X/5b9c9af97ebf529cb9959c6652a126351d031a06_2_867x750.jpeg" alt="Carbon Robotics">
+        <h2>Carbon Robotics AgTech</h2>
+        <p>Robotics for sustainable agriculture</p>
+        <div class="card-footer">
+          <span>$100</span>
+          <span>👁️ 12</span>
+          <span>💬 3</span>
+        </div>
+      </a>
+      <a href="https://impactinvestingcommunity.com/t/water-equity-clean-water/167" class="card">
+        <img src="https://impactinvestingcommunity.com/uploads/default/optimized/1X/6ae6b49924d7f62284b4aff0b61dc30a4ab2db0f_2_867x750.jpeg" alt="Water Equity">
+        <h2>Water Equity - Clean Water</h2>
+        <p>Investing in clean water initiatives</p>
+        <div class="card-footer">
+          <span>$50,000</span>
+          <span>👁️ 12</span>
+          <span>💬 3</span>
+        </div>
+      </a>
+      <a href="https://impactinvestingcommunity.com/t/dandy/171" class="card">
+        <img src="https://impactinvestingcommunity.com/uploads/default/optimized/1X/65db96e12643ade0a8bac676696ffd4cf97a253f_2_867x750.jpeg" alt="Dandy">
+        <h2>Dandy</h2>
+        <p>Innovative solutions for modern industries</p>
+        <div class="card-footer">
+          <span>$10,000</span>
+          <span>👁️ 12</span>
+          <span>💬 3</span>
+        </div>
+      </a>
+      <a href="https://impactinvestingcommunity.com/t/aura-health-mental-wellness/172" class="card">
+        <img src="https://impactinvestingcommunity.com/uploads/default/optimized/1X/2c719da7e8b89a17d8e55de7b0221c812eb77767_2_867x750.jpeg" alt="Aura Health">
+        <h2>Aura Health - Mental Wellness</h2>
+        <p>Mental wellness platform</p>
+        <div class="card-footer">
+          <span>$7,000</span>
+          <span>👁️ 12</span>
+          <span>💬 3</span>
+        </div>
+      </a>
+      <a href="https://impactinvestingcommunity.com/t/chenmed/169" class="card">
+        <img src="https://impactinvestingcommunity.com/uploads/default/optimized/1X/394f81390b01946db85256e39ceef6db3df67a7e_2_867x750.jpeg" alt="ChenMed">
+        <h2>ChenMed</h2>
+        <p>Primary care for seniors</p>
+        <div class="card-footer">
+          <span>$100</span>
+          <span>👁️ 12</span>
+          <span>💬 3</span>
+        </div>
+      </a>
+      <a href="https://impactinvestingcommunity.com/t/mesentech/166" class="card">
+        <img src="https://impactinvestingcommunity.com/uploads/default/optimized/1X/05eaf58ba06cff210fa32ce69f0b98c2289adfdb_2_867x750.jpeg" alt="Mesentech">
+        <h2>Mesentech</h2>
+        <p>Bone healing technologies</p>
+        <div class="card-footer">
+          <span>$15,000</span>
+          <span>👁️ 10</span>
+          <span>💬 2</span>
+        </div>
+      </a>
+      <a href="https://impactinvestingcommunity.com/t/biotech-first-ascent-biomedical/174" class="card">
+        <img src="https://impactinvestingcommunity.com/uploads/default/optimized/1X/feab962c15f98416a9c00c1e572a6e274ab20406_2_867x750.jpeg" alt="First Ascent Biomedical">
+        <h2>First Ascent Biomedical</h2>
+        <p>Individualized cancer treatment plans</p>
+        <div class="card-footer">
+          <span>$35,000</span>
+          <span>👁️ 8</span>
+          <span>💬 1</span>
+        </div>
+      </a>
+      <a href="https://impactinvestingcommunity.com/t/hypatia-women-ceo-etf/159" class="card">
+        <img src="https://impactinvestingcommunity.com/uploads/default/optimized/1X/8e594662fe7eff025a0a48a1fe6790dbadd8f100_2_867x750.jpeg" alt="Hypatia Women CEO ETF">
+        <h2>Hypatia Women CEO ETF</h2>
+        <p>Focused on gender equality in leadership</p>
+        <div class="card-footer">
+          <span>$100</span>
+          <span>👁️ 12</span>
+          <span>💬 3</span>
+        </div>
+      </a>
+      <a href="https://impactinvestingcommunity.com/t/the-lyme-timber-company/137" class="card">
+        <img src="https://impactinvestingcommunity.com/uploads/default/original/1X/e63d43143115be6c67b1942e67735565308512b5.png" alt="The Lyme Timber Company">
+        <h2>The Lyme Timber Company</h2>
+        <p>Investing in sustainable timber</p>
+        <div class="card-footer">
+          <span>$45,000</span>
+          <span>👁️ 12</span>
+          <span>💬 3</span>
+        </div>
+      </a>
+      <!-- Add more cards as needed -->
+    </div>
+    <button class="scroll-btn scroll-right">&gt;</button>
+  </div>
+</div>
+
+<script>
+const scrollCards = document.querySelector('.scroll-cards');
+const scrollLeftBtn = document.querySelector('.scroll-left');
+const scrollRightBtn = document.querySelector('.scroll-right');
+
+scrollLeftBtn.addEventListener('click', () => {
+  scrollCards.scrollBy({ left: -300, behavior: 'smooth' });
+});
+
+scrollRightBtn.addEventListener('click', () => {
+  scrollCards.scrollBy({ left: 300, behavior: 'smooth' });
+});
+
+
+</script>
+
+
+<div class="unique-scrollable-container">
+  <h1 class="unique-scrollable-title">Discover List of Investment Opportunities</h1>
+  <div class="unique-scrollable-wrapper">
+    <button class="unique-scroll-btn unique-scroll-left">&lt;</button>
+    <div class="unique-scroll-cards" id="unique-scroll-cards">
+      
+      <a href="https://impactinvestingcommunity.com/c/free-educational-videos/venture-capital-basics/25" class="unique-card-link">
+        <div class="unique-video-category" style="background-image: url('https://impactinvestingcommunity.com/uploads/default/original/1X/d668caa485343f8fd346b079c269d2263f1dd262.png');">
+          Venture Capital <br> Basics
+        </div>
+      </a>
+      
+      <a href="https://impactinvestingcommunity.com/c/free-educational-videos/gender-lens-investing/39" class="unique-card-link">
+        <div class="unique-video-category" style="background-image: url('https://impactinvestingcommunity.com/uploads/default/original/1X/c8ac8e0af39bb7eb13d61e4bb6a373d99760cb6f.png');">
+          Gender Lens <br> Investing
+        </div>
+      </a>
+      
+      <a href="https://impactinvestingcommunity.com/c/free-educational-videos/impact-lending-essentials/40" class="unique-card-link">
+        <div class="unique-video-category" style="background-image: url('https://impactinvestingcommunity.com/uploads/default/original/1X/f47571080c005164ee019591a6254e5976d8d799.png');">
+          Impact Lending <br> Essentials
+        </div>
+      </a>
+      
+      <a href="https://impactinvestingcommunity.com/c/free-educational-videos/investing-for-family-wealth/41" class="unique-card-link">
+        <div class="unique-video-category" style="background-image: url('https://impactinvestingcommunity.com/uploads/default/original/1X/225515c2f7fc49921ac635df4cc64d32100bba9e.png');">
+          Investing for <br> Family Wealth
+        </div>
+      </a>
+      
+      <a href="https://impactinvestingcommunity.com/c/free-educational-videos/sustainable-agriculture-investing/42" class="unique-card-link">
+        <div class="unique-video-category" style="background-image: url('https://impactinvestingcommunity.com/uploads/default/original/1X/59671cc36d033acf8287f6402ff1c69fe487b4d9.png');">
+          Sustainable <br> Agriculture
+        </div>
+      </a>
+      
+      <!-- Add more cards as needed -->
+      
+    </div>
+    <button class="unique-scroll-btn unique-scroll-right">&gt;</button>
+  </div>
+</div>
+
+<script>
+  const uniqueScrollCards = document.getElementById('unique-scroll-cards');
+  const uniqueScrollLeftBtn = document.querySelector('.unique-scroll-left');
+  const uniqueScrollRightBtn = document.querySelector('.unique-scroll-right');
+
+  // Width of one card plus margin. Adjust this value based on your card width/margins.
+  const uniqueCardWidth = 220; 
+  
+  uniqueScrollLeftBtn.addEventListener('click', () => {
+    uniqueScrollCards.scrollBy({ left: -uniqueCardWidth, behavior: 'smooth' });
+  });
+
+  uniqueScrollRightBtn.addEventListener('click', () => {
+    uniqueScrollCards.scrollBy({ left: uniqueCardWidth, behavior: 'smooth' });
+  });
+</script>
+<section class="events-section">
+  <h2 class="events-heading">Upcoming Events</h2>
+  
+  <div class="events-container">
+    <button class="scroll-btn scroll-left">&lt;</button>
+    
+    <div class="events-scroll-wrapper" id="events-scroll-wrapper">
+      <!-- Event Card 1 -->
+      <div class="event-card">
+        <div class="event-card-top">
+          <div class="speakers">
+            <div class="speaker">
+              <div class="speaker-image">
+                <img src="heather.jpg" alt="Heather Beatty">
+              </div>
+              <span class="speaker-name">HEATHER BEATTY</span>
+            </div>
+            <div class="speaker">
+              <div class="speaker-image">
+                <img src="tanaha.jpg" alt="Tanaha Hairston">
+              </div>
+              <span class="speaker-name">TANAHA HAIRSTON</span>
+            </div>
+          </div>
+          <div class="sponsor-logo">
+            <img src="scopefour_logo.png" alt="ScopeFour Capital Logo">
+          </div>
+        </div>
+        <div class="event-card-content">
+          <h3 class="event-title">Investing in Renewable Energy: Why It Matters and the Future of Renew...</h3>
+          <div class="event-date">
+            <span class="event-month">SEP 10</span>
+            <span class="event-time">12:00 PM–2:00 PM</span>
+            <span class="event-location">Zoom Meeting</span>
+            <span class="event-going">10 going</span>
+          </div>
+          <button class="register-button">Register</button>
+        </div>
+      </div>
+
+      <!-- Event Card 2 -->
+      <div class="event-card">
+        <div class="event-card-top">
+          <div class="speakers">
+            <div class="speaker">
+              <div class="speaker-image">
+                <img src="heather.jpg" alt="Heather Beatty">
+              </div>
+              <span class="speaker-name">HEATHER BEATTY</span>
+            </div>
+            <div class="speaker">
+              <div class="speaker-image">
+                <img src="tanaha.jpg" alt="Tanaha Hairston">
+              </div>
+              <span class="speaker-name">TANAHA HAIRSTON</span>
+            </div>
+          </div>
+          <div class="sponsor-logo">
+            <img src="scopefour_logo.png" alt="ScopeFour Capital Logo">
+          </div>
+        </div>
+        <div class="event-card-content">
+          <h3 class="event-title">Investing in Renewable Energy: Why It Matters and the Future of Renew...</h3>
+          <div class="event-date">
+            <span class="event-month">SEP 10</span>
+            <span class="event-time">12:00 PM–2:00 PM</span>
+            <span class="event-location">Zoom Meeting</span>
+            <span class="event-going">10 going</span>
+          </div>
+          <button class="register-button">Register</button>
+        </div>
+      </div>
+
+      <!-- Event Card 3 -->
+      <div class="event-card">
+        <div class="event-card-top">
+          <div class="speakers">
+            <div class="speaker">
+              <div class="speaker-image">
+                <img src="heather.jpg" alt="Heather Beatty">
+              </div>
+              <span class="speaker-name">HEATHER BEATTY</span>
+            </div>
+            <div class="speaker">
+              <div class="speaker-image">
+                <img src="tanaha.jpg" alt="Tanaha Hairston">
+              </div>
+              <span class="speaker-name">TANAHA HAIRSTON</span>
+            </div>
+          </div>
+          <div class="sponsor-logo">
+            <img src="scopefour_logo.png" alt="ScopeFour Capital Logo">
+          </div>
+        </div>
+        <div class="event-card-content">
+          <h3 class="event-title">Investing in Renewable Energy: Why It Matters and the Future of Renew...</h3>
+          <div class="event-date">
+            <span class="event-month">SEP 10</span>
+            <span class="event-time">12:00 PM–2:00 PM</span>
+            <span class="event-location">Zoom Meeting</span>
+            <span class="event-going">10 going</span>
+          </div>
+          <button class="register-button">Register</button>
+        </div>
+      </div>
+
+      <!-- Event Card 4 -->
+      <div class="event-card">
+        <div class="event-card-top">
+          <div class="speakers">
+            <div class="speaker">
+              <div class="speaker-image">
+                <img src="heather.jpg" alt="Heather Beatty">
+              </div>
+              <span class="speaker-name">HEATHER BEATTY</span>
+            </div>
+            <div class="speaker">
+              <div class="speaker-image">
+                <img src="tanaha.jpg" alt="Tanaha Hairston">
+              </div>
+              <span class="speaker-name">TANAHA HAIRSTON</span>
+            </div>
+          </div>
+          <div class="sponsor-logo">
+            <img src="scopefour_logo.png" alt="ScopeFour Capital Logo">
+          </div>
+        </div>
+        <div class="event-card-content">
+          <h3 class="event-title">Investing in Renewable Energy: Why It Matters and the Future of Renew...</h3>
+          <div class="event-date">
+            <span class="event-month">SEP 10</span>
+            <span class="event-time">12:00 PM–2:00 PM</span>
+            <span class="event-location">Zoom Meeting</span>
+            <span class="event-going">10 going</span>
+          </div>
+          <button class="register-button">Register</button>
+        </div>
+      </div>
+
+      <!-- Event Card 5 -->
+      <div class="event-card">
+        <div class="event-card-top">
+          <div class="speakers">
+            <div class="speaker">
+              <div class="speaker-image">
+                <img src="heather.jpg" alt="Heather Beatty">
+              </div>
+              <span class="speaker-name">HEATHER BEATTY</span>
+            </div>
+            <div class="speaker">
+              <div class="speaker-image">
+                <img src="tanaha.jpg" alt="Tanaha Hairston">
+              </div>
+              <span class="speaker-name">TANAHA HAIRSTON</span>
+            </div>
+          </div>
+          <div class="sponsor-logo">
+            <img src="scopefour_logo.png" alt="ScopeFour Capital Logo">
+          </div>
+        </div>
+        <div class="event-card-content">
+          <h3 class="event-title">Investing in Renewable Energy: Why It Matters and the Future of Renew...</h3>
+          <div class="event-date">
+            <span class="event-month">SEP 10</span>
+            <span class="event-time">12:00 PM–2:00 PM</span>
+            <span class="event-location">Zoom Meeting</span>
+            <span class="event-going">10 going</span>
+          </div>
+          <button class="register-button">Register</button>
+        </div>
+      </div>
+
+      <!-- Event Card 6 -->
+      <div class="event-card">
+        <div class="event-card-top">
+          <div class="speakers">
+            <div class="speaker">
+              <div class="speaker-image">
+                <img src="heather.jpg" alt="Heather Beatty">
+              </div>
+              <span class="speaker-name">HEATHER BEATTY</span>
+            </div>
+            <div class="speaker">
+              <div class="speaker-image">
+                <img src="tanaha.jpg" alt="Tanaha Hairston">
+              </div>
+              <span class="speaker-name">TANAHA HAIRSTON</span>
+            </div>
+          </div>
+          <div class="sponsor-logo">
+            <img src="scopefour_logo.png" alt="ScopeFour Capital Logo">
+          </div>
+        </div>
+        <div class="event-card-content">
+          <h3 class="event-title">Investing in Renewable Energy: Why It Matters and the Future of Renew...</h3>
+          <div class="event-date">
+            <span class="event-month">SEP 10</span>
+            <span class="event-time">12:00 PM–2:00 PM</span>
+            <span class="event-location">Zoom Meeting</span>
+            <span class="event-going">10 going</span>
+          </div>
+          <button class="register-button">Register</button>
+        </div>
+      </div>
+    </div>
+    
+    <button class="scroll-btn scroll-right">&gt;</button>
+  </div>
+</section>
+
+<script>
+  const scrollWrapper = document.getElementById('events-scroll-wrapper');
+  const leftBtn = document.querySelector('.scroll-left');
+  const rightBtn = document.querySelector('.scroll-right');
+
+  // Adjust card width + margins to match exactly how many cards are visible at once.
+  const cardWidth = 260; // Example: card width (220px) + margins( 2 * 10px ) = 240-260px approx
+  leftBtn.addEventListener('click', () => {
+    scrollWrapper.scrollBy({ left: -cardWidth, behavior: 'smooth' });
+  });
+
+  rightBtn.addEventListener('click', () => {
+    scrollWrapper.scrollBy({ left: cardWidth, behavior: 'smooth' });
+  });
+</script>
+
+
+
+</section>
+{{/if}}
+
