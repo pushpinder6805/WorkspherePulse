@@ -29,32 +29,12 @@ body, .d-header, .wrap {
         <p class="unique-banner-description">
           Join our community dedicated to professional growth through shared experiences and communal advice to foster mental and emotional well-being at your place of work.
         </p>
-       <button class="unique-banner-button" onclick="showLogin()">Login workspherepulse</button>
-<button class="unique-banner-button" onclick="showCreateAccount()">Join workspherepulse</button>
-
-<script>
-  function showLogin() {
-    if (typeof Discourse !== "undefined" && Discourse.__container__) {
-      let session = Discourse.__container__.lookup("service:session");
-      session.login();
-    } else {
-      console.error("Discourse session service not found");
-    }
-  }
-
-  function showCreateAccount() {
-    if (typeof Discourse !== "undefined" && Discourse.__container__) {
-      let controller = Discourse.__container__.lookup("controller:login");
-      if (controller) {
-        controller.send("showCreateAccount");
-      } else {
-        console.error("Discourse login controller not found");
-      }
-    }
-  }
-</script>
-
-
+        <a href="/signup" style="text-decoration: none;">
+  <button class="unique-banner-button">Join workspherepulse</button>
+</a>
+<a href="/login" style="text-decoration: none;">
+  <button class="unique-banner-button">Login workspherepulse</button>
+</a>
       </div>
     </div>
 
