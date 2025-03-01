@@ -77,19 +77,24 @@
       margin: 10px 0;
       }
       .impact-cards-container {
-      display: flex;
-      margin: 2px 0;
-      gap: 21px;
-      }
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Responsive Grid */
+    gap: 20px;
+    padding: 20px;
+    max-width: 1100px;
+    margin: 0 auto;
+}
 
-      .impact-card {
-      position: relative;
-      height: 23em;
-      width: 100%;
-      border-radius: 15px;
-      overflow: hidden;
-      box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-      }
+.impact-card {
+    position: relative;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+.impact-card:hover {
+    transform: scale(1.05);
+}
 
       .card-image {
       width: 100%;
@@ -97,30 +102,36 @@
       display: block;
       }
 
-      .card-overlay {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background-color: rgba(181, 161, 111, 0.8); /* Semi-transparent gold overlay */
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-      }
-
-      .card-overlay p {
-      color: white;
-      font-size: 1.2rem;
-      font-weight: bold;
-      margin: 0;
-      padding: 20px;
-      }
+ .card-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(181, 161, 111, 0.8); /* Gold overlay */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+}
+    .card-overlay p {
+    color: white;
+    font-size: 1.1rem;
+    font-weight: bold;
+    margin: 0;
+    text-transform: uppercase;
+}
 
       .impact-card:hover .card-overlay {
       background-color: rgba(181, 161, 111, 0.9); /* Slightly darker on hover */
       }
+      /* Mobile Responsive Adjustments */
+@media (max-width: 768px) {
+    .impact-cards-container {
+        grid-template-columns: 1fr;
+    }
+}
 
       .event-container {
       display: flex;
