@@ -35,6 +35,22 @@ body, .d-header, .wrap {
 <a href="/signup" style="text-decoration: none;">
   <button class="unique-banner-button">Workspherepulse Login</button>
 </a>
+<button id="custom-login-btn" class="btn-primary btn-small">
+  <i class="fa fa-user"></i> Log In
+</button>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const loginBtn = document.getElementById("custom-login-btn");
+    if (loginBtn) {
+      loginBtn.addEventListener("click", function () {
+        // Trigger Discourse login modal
+        Discourse.__container__.lookup("controller:login").send("showLogin");
+      });
+    }
+  });
+</script>
+
       </div>
     </div>
 
