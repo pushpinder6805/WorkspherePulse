@@ -5,186 +5,136 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Module Page</title>
+    <title>About Us - Workspherepulse</title>
     <style>
-        /* Base Styles */
         body {
             font-family: Arial, sans-serif;
-            background-color: #f7f7f7;
             margin: 0;
             padding: 0;
-        }
-
-        .container444 {
-            max-width: 1200px;
-            margin: 40px auto;
-            padding: 20px;
-            background-color: #fff;
-            border-radius: 15px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        }
-
-        .header444 {
-            text-align: center;
-            margin-bottom: 40px;
-        }
-
-        .header444 h1 {
-            font-size: 36px;
-            font-weight: 500;
-            color: #3f3f3f;
-        }
-
-        .cards444 {
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-        }
-
-        .card444 {
-            background-color: #fff;
-            border-radius: 10px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-            overflow: hidden;
-            width: 300px;
-            transition: transform 0.2s ease;
-        }
-
-        .card444:hover {
-            transform: scale(1.05);
-        }
-
-        .card-header444 img {
-            width: 100%;
-            height: 160px;
-            object-fit: cover;
-        }
-
-        .card-body444 {
-            padding: 20px;
-        }
-
-        .card-body444 h2 {
-            font-size: 18px;
-            font-weight: bold;
+            background-color: #f5f7fa;
             color: #333;
-            margin-bottom: 15px;
         }
 
-        .card-body444 p {
-            font-size: 14px;
-            color: #555;
+        .about-wrapper {
+            max-width: 900px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+
+        .about-header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .about-header h1 {
+            font-size: 32px;
+            color: #2c3e50;
+        }
+
+        .about-content p {
+            font-size: 16px;
+            line-height: 1.6;
+        }
+
+        .about-focus {
+            margin-top: 30px;
+        }
+
+        .about-focus h2 {
+            font-size: 24px;
+            color: #2c3e50;
             margin-bottom: 10px;
         }
 
-        .card-footer444 {
+        .about-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .about-list li {
+            background-color: #ecf0f1;
+            margin: 10px 0;
+            padding: 10px;
+            border-radius: 5px;
             display: flex;
-            justify-content: space-between;
             align-items: center;
-            padding: 0 20px 20px;
-            font-size: 12px;
-            color: #777;
         }
 
-        .icon-container444 {
-            display: flex;
-            align-items: center;
-            gap: 10px;
+        .about-list li::before {
+            content: '\2713'; /* Checkmark symbol */
+            color: #27ae60;
+            font-weight: bold;
+            margin-right: 10px;
         }
 
-        .icon-container444 i {
-            color: #ff5858;
+        .about-cta {
+            text-align: center;
+            margin-top: 40px;
+            padding: 20px;
+            background-color: #2c3e50;
+            color: white;
+            border-radius: 8px;
         }
 
-        .icon-container444 span {
-            color: #777;
+        .about-cta h2 {
+            margin-bottom: 10px;
         }
 
-        /* Responsive Design */
-        @media (max-width: 768px) {
-            .cards444 {
-                flex-direction: column;
-                align-items: center;
-            }
+        .about-button {
+            display: inline-block;
+            margin-top: 10px;
+            padding: 10px 20px;
+            background-color: #27ae60;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 16px;
+        }
 
-            .card444 {
-                width: 100%;
+        .about-button:hover {
+            background-color: #219150;
+        }
+
+        @media (max-width: 600px) {
+            .about-wrapper {
+                margin: 20px;
+                padding: 15px;
             }
         }
     </style>
 </head>
 <body>
-
-    <div class="container444">
-        <div class="header444">
-            <h1>Impact Lending</h1>
+    <div class="about-wrapper">
+        <div class="about-header">
+            <h1>About Workspherepulse</h1>
         </div>
 
-        <div class="cards444">
-            <a href="https://impactinvestingcommunity.com/t/part-1-what-is-impact-lending/190" class="card-link">
-            <div class="card444">
-                <div class="card-header444">
-                    <img src="https://impactinvestingcommunity.com/uploads/default/original/1X/6c7accfa95b0453b6db85112042a9a021f5dfab9.png" alt="Module Image 1">
-                </div>
-                <div class="card-body444">
-                    <h2>PART 1 | What is Impact Lending?</h2>
-                    <p>Share your key highlights or what stood out to you by clicking the "Reply" button below!</p>
-                </div>
-                <div class="card-footer444">
-                    <div class="icon-container444">
-                        <i class="fas fa-heart"></i><span>Aug 30</span>
-                    </div>
-                    <div class="icon-container444">
-                        <i class="fas fa-comment"></i><span>6</span>
-                    </div>
-                </div>
-            </div>
-            </a>
+        <div class="about-content">
+            <p>We are an online platform for discussing workplace-related events, issues, and situations. Work can provide fulfillment and a sense of purpose, but it also comes with challenges. Our platform serves as a safe space for individuals to share experiences, seek advice, and connect with others.</p>
+            <p>We aim to foster a strong community where people feel heard and supported in navigating workplace dynamics.</p>
+        </div>
 
-<a href="https://impactinvestingcommunity.com/t/part-2-impact-lending-social-returns-and-financial-viability/191" class="card-link">
-            <div class="card444">
-                <div class="card-header444">
-                    <img src="https://impactinvestingcommunity.com/uploads/default/original/1X/7c01eda9a05d16db8ba11b98478832c81e3023bd.png" alt="Module Image 2">
-                </div>
-                <div class="card-body444">
-                    <h2>PART 2 | Impact Lending: Social Returns and Financial Viability</h2>
-                    <p>Share your thoughts about this topic by clicking the "Reply" button below! WATCH NEXT ➡</p>
-                </div>
-                <div class="card-footer444">
-                    <div class="icon-container444">
-                        <i class="fas fa-heart"></i><span>Aug 30</span>
-                    </div>
-                    <div class="icon-container444">
-                        <i class="fas fa-comment"></i><span>10</span>
-                    </div>
-                </div>
-            </div>
-            </a>
+        <div class="about-focus">
+            <h2>Our Focus</h2>
+            <ul class="about-list">
+                <li>Safe and Supportive Environment: A judgment-free space to share experiences.</li>
+                <li>Community-Centered: Encouraging interaction and mutual support.</li>
+                <li>Information and Resources: Providing guidance for workplace success.</li>
+                <li>Forum Discussions: Engaging topics about teams, managers, and workplace dynamics.</li>
+                <li>Community Events: Webinars, Q&A sessions, and workshops.</li>
+                <li>Accessibility: Open to everyone, regardless of location or background.</li>
+            </ul>
+        </div>
 
-<a href="https://impactinvestingcommunity.com/t/part-3-explaining-impact-lending-to-your-kids/192" class="card-link">
-            <div class="card444">
-                <div class="card-header444">
-                    <img src="https://impactinvestingcommunity.com/uploads/default/original/1X/b9b74f8299201cf217ae67824bd4bc899efa4db7.png" alt="Module Image 3">
-                </div>
-                <div class="card-body444">
-                    <h2>PART 3 | Explaining Impact Lending To Your Kids</h2>
-                    <p>Share your ideas on how you talk about this with your kids by clicking the "Reply" button below!</p>
-                </div>
-                <div class="card-footer444">
-                    <div class="icon-container444">
-                        <i class="fas fa-heart"></i><span>Aug 30</span>
-                    </div>
-                    <div class="icon-container444">
-                        <i class="fas fa-comment"></i><span>8</span>
-                    </div>
-                </div>
-            </div>
-            </a>
+        <div class="about-cta">
+            <h2>Join Our Community</h2>
+            <p>Be part of a community that supports and empowers each other in workplace discussions.</p>
+            <a href="/register" class="about-button">Sign Up Now</a>
         </div>
     </div>
-
-    <!-- Font Awesome for icons -->
-    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </body>
 </html>
 
