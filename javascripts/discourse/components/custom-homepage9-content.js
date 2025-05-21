@@ -6,7 +6,7 @@ export default class CustomHomepageContent extends Component {
 
   get isCustomHomepage() {
     const { currentURL } = this.router;
-    const customPaths = ['https://test.workspherepulse.com/', 'https://test.workspherepulse.com'];
+    const customPaths = ['/', '/'];
     
     console.log("Current URL:", currentURL);  // Debugging: Check the URL 
     return customPaths.includes(currentURL);
